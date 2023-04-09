@@ -5,5 +5,31 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #1F202B;
+    background-color: #d2d3df;
+}
+
+/* Navbar */
+
+nav {
+    display: flex;
+    padding: 20px 0;
+    justify-content: space-around;
+}
+
+nav .logo {
+    margin-top: 10px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin-top: 10px;
+    justify-content: space-between;
+    width: 40%;
+}
+
+nav ul li a {
+    text-decoration: none;
 }
