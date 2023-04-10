@@ -5,7 +5,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #d2d3df;
+    background-color: #1c2467;
 }
 
 /* Navbar */
@@ -13,6 +13,7 @@ body {
 nav {
     display: flex;
     padding: 20px 0;
+    color: white;
     justify-content: space-around;
 }
 
@@ -20,16 +21,97 @@ nav .logo {
     margin-top: 10px;
     font-family: 'Inter', sans-serif;
     letter-spacing: 2px;
+    cursor: pointer;
 }
 
 nav ul {
     display: flex;
     list-style: none;
-    margin-top: 10px;
+    margin-top: 13px;
     justify-content: space-between;
     width: 40%;
+    font-size: 0.8em;
 }
 
 nav ul li a {
+    color: white;
     text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: rgba(255, 255, 255, 0.649);
+}
+
+.menu-toggle {
+    display: none;
+    margin-top: 10px;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #FFFF;
+    border-radius: 6px;
+    transition: all 1s;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 29px;
+    left: -6px;
+    top: -3px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+}
+
+nav ul.slide {
+    transform: translateX(0);
+}
+
+
+
+/* Ukuran Tablet */
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        width: 50%;
+    }
+}
+
+/* Ukuran Mobile */
+@media screen and (max-width: 576px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        right: 0;
+        width: 70%;
+        height: 100vh;
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: -1;
+        background-color: rgba(255, 255, 255, 0.894);
+        transform: translateX(100%);
+        transition: .5s;
+    }
+
+    nav ul li a {
+        color: black;
+    }
+
+    nav ul li a:hover {
+        color: rgba(0, 0, 0, 0.454)
+    }
 }
