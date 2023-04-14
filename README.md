@@ -1,3 +1,3 @@
 # responsive-navbar
 
-Latihan membuat responsive navbar 
+Belajar responsive navbar dan git
